@@ -1,0 +1,230 @@
+<!--build:uncomment<%@ Page language="c#" CodeBehind="index_fw2.aspx.cs" AutoEventWireup="false" Inherits="IMod.Web.V2.Index" %>endbuild-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
+
+{{include "includes/head.html"}}
+
+<body runat="server" id="MainBody">
+<form id="MainForm" method="post" runat="server">
+	<asp:PlaceHolder runat="server" ID="SiteBuilder" Visible="False"><!-- SiteBuilder // --></asp:PlaceHolder>
+	<asp:PlaceHolder runat="server" ID="NavMaster" Visible="False"><!-- NavMaster // --></asp:PlaceHolder>
+	<div id="ContentAdminTools" runat="server" visible="false"></div>
+
+<a name="pagetop" aria-hidden="true"><span class="sr-only">Page Top</span></a>
+<div id="outer-wrap" class="m-pikabu-viewport">
+  	
+<!-- Navigation drawer -->
+{{include "includes/mobile-nav.html"}}
+      
+<div id="inner-wrap" class="m-pikabu-container">
+
+	{{include "includes/header.html"}}
+  
+	<!-- MAIN CONTENT AREA -->
+	<div role="main" id="main" class="structBody">
+        <h1 class="sr-only">Home Page</h1>
+		<div class="container">
+			
+			<!-- Image Rotator -->
+			<div class="row">
+				<section class="col-md-12 imageRotator">
+					<div id="ContentRotator" runat="server">
+						<div class="bx_slide">
+							<div class="sldimg" style="background-image: url(http://placehold.it/1140x400)">
+								<a href="#"><span class="sr-only">[Content Name]</span></a>
+							</div>
+							<div class="sldtxt">
+								<div class="title"><a href="#">Slide Title</a></div>
+								<div class="preview">Pellentesque porta et lorem id lacinia. Nam malesuada nec tortor placerat pulvinar.</div>
+							</div>
+						</div>
+						<div class="bx_slide">
+							<div class="sldimg" style="background-image: url(http://placehold.it/1140x400)">
+								<a href="#"><span class="sr-only">[Content Name]</span></a>
+							</div>
+							<div class="sldtxt">
+								<div class="title"><a href="#">Slide Title</a></div>
+								<div class="preview">Pellentesque porta et lorem id lacinia. Nam malesuada nec tortor placerat pulvinar.</div>
+							</div>
+						</div>
+	
+						<!--<div class="bx_slide">
+						<div class="tools">[Tool Icons]</div>
+						<div class="sldimg">[EmptyCheck:ThumbnailUrl][Link]<img src="[ThumbnailUrl]" alt="[Content Name]" />[/Link][/EmptyCheck:ThumbnailUrl] </div>
+						[EmptyCheck:Preview]<div class="sldtxt">
+						<div class="title">[Link][Content Name][/Link]</div>
+						<div class="preview">[Preview]</div>
+						</div>[EmptyCheck:Preview]
+						</div>--> 
+	
+					</div>
+				</section>
+			</div>
+			
+
+			<!-- Two Col Home Verison -->
+			<div class="row">
+				<section class="col-sm-12 col-md-12">
+	
+					<div id="ContentMiddle" runat="server">
+						<asp:PlaceHolder runat=server Visible="false">
+						<div runat="server" id="ContentSubGroupHeader"></div>
+						</asp:PlaceHolder>
+						<asp:PlaceHolder runat="server" ID="PageTitleSection" Visible="false">
+						<div> <span id="PageTitle" runat="server" class="PageTitleHeader"></span> <span id="PageSubTitle" runat="server" class="PageSubTitleHeader" visible="False"></span> <span id="PageTitleLink" runat="server" class="PageSubTitleHeader" visible="False"></span> </div>
+						<div id="PageInstructions" runat="server" class="instructions"></div>
+                        </asp:PlaceHolder>
+                        <!-- three across grid -->
+                        <div class="col-xs-12 col-sm-12 col-md-4 gridItem">
+                            <div class="thumb" style="background-image:url(http://placehold.it/400x250);"><a href="#"><img src="http://placehold.it/400x250" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="invisible"></a></div>
+                            <div class="text">
+                                <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 gridItem">
+                                <div class="thumb" style="background-image:url(http://placehold.it/400x250);"><a href="#"><img src="http://placehold.it/400x250" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="invisible"></a></div>
+                                <div class="text">
+                                    <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                    <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 gridItem">
+                                    <div class="thumb" style="background-image:url(http://placehold.it/400x250);"><a href="#"><img src="http://placehold.it/400x250" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="invisible"></a></div>
+                                    <div class="text">
+                                        <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                        <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                                    </div>
+                                </div>
+						<hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere, mauris ac laoreet placerat, turpis libero malesuada mauris, eget tincidunt justo lacus vel tellus. Ut sit amet lectus leo. Nam vitae arcu in quam luctus ultricies vitae id quam. In in pretium dui, sit amet consequat arcu. Etiam id erat sodales, venenatis elit a, molestie orci. </p>
+                        <hr>
+						
+					</div>
+				</section>
+
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 leftCol">
+                    <div id="ContentMiddleLayoutLeft" runat="server">
+                            <h2>News</h2>
+                            <!--
+                            <div class="newsItem">
+                                [EmptyCheck:ThumbnailUrl]<div class="thumb">[Link]<img src="[ThumbnailUrl]" alt="[Content Name]" />[/Link]</div>
+                                <div class="text">[/EmptyCheck:ThumbnailUrl]
+                                    <div class="title">[Link][Content Name][/Link][Tool Icons]</div>
+                                    <div class="preview">[Preview] </div>
+                                [EmptyCheck:ThumbnailUrl]</div>[/EmptyCheck:ThumbnailUrl]
+                            </div>
+                            -->
+                            <div class="newsItem">
+                                <div class="thumb"><img src="http://placehold.it/120x120" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></div>
+                                <div class="text">
+                                    <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                    <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                                </div>
+                            </div>
+                            <div class="newsItem">
+                                    <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                    <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                            </div>
+                            <div class="newsItem">
+                                <div class="thumb"><img src="http://placehold.it/120x120" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></div>
+                                <div class="text">
+                                    <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                    <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 rightCol">
+                        <div id="ContentMiddleLayoutRight" runat="server">
+                                <h2>Events</h2>
+                                <!--<div class="eventItem">
+                                <div class="date">
+                                <div class="month">[Month Abbreviation - Start Date]</div>
+                                <div class="day">[Day of the Month - Start Date]</div>
+                                </div>
+                                <div class="text">
+                                <div class="title">[Link][Content Name][/Link][Tool Icons]</div>
+                                <div class="preview">[Preview]</div>
+                                </div>
+                                </div>-->
+                                <div class="eventItem">
+                                    <div class="date">
+                                        <div class="month">Nov</div>
+                                        <div class="day">25</div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                        <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                                    </div>
+                                </div>
+                                <div class="eventItem">
+                                    <div class="date">
+                                        <div class="month">Dec</div>
+                                        <div class="day">08</div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+                                        <div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+			
+		</div>
+	</div>
+	
+	<!-- FOOTER -->
+	{{include "includes/footer.html"}}
+
+<div class="toplink visible-xs-block"><a href="#pagetop" role="button"><div class="fa fa-arrow-circle-o-up"></div> Back to Top</a></div>
+
+</div>
+</div>
+</form>
+<asp:PlaceHolder runat="server" ID="phFacebookSupport"></asp:PlaceHolder>
+
+{{include "includes/footer-scripts.html"}}
+
+<script>
+jQuery(document).ready(function(){
+
+	// Initialize BX Slider
+	jQuery('.bx_slide').newsItemSlice({
+		containerWrapper: '<div class="bx_slider"></div>'
+		//rowWrapper: '<div class="row"></div>'
+		//countPerRow: 3	
+	});
+	jQuery('.bx_slider').bxSlider({
+		auto: (jQuery(".bx_slider>.bx_slide").length > 1) ? true: false,
+		pager: true,
+		speed: 600,
+		pause: 10000,
+		mode: 'fade',
+		nextText: '<div class="fa fa-chevron-right"><span class="sr-only">Next</span></div>',
+		prevText: '<div class="fa fa-chevron-left"><span class="sr-only">Previous</span></div>',
+		controls: (jQuery(".bx_slider>.bx_slide").length > 1) ? true: false,
+		pager: (jQuery(".bx_slider>.bx_slide").length > 1) ? true: false	
+    });
+    
+    // Initialize BX Slider
+	jQuery('.gridItem').newsItemSlice({
+		containerWrapper: '<div class="gridWrap"></div>',
+		rowWrapper: '<div class="row"></div>',
+		countPerRow: 3	
+	});
+    
+	
+})
+</script>
+
+</body>
+</html>

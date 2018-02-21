@@ -1,0 +1,266 @@
+<!--build:uncomment<%@ Page language="c#" CodeBehind="index_fw2.aspx.cs" AutoEventWireup="false" Inherits="IMod.Web.V2.Index" %>endbuild-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
+
+{{include "includes/head.html"}}
+
+<body runat="server" id="MainBody">
+<form id="MainForm" method="post" runat="server">
+	<asp:PlaceHolder runat="server" ID="SiteBuilder" Visible="False"><!-- SiteBuilder // --></asp:PlaceHolder>
+	<asp:PlaceHolder runat="server" ID="NavMaster" Visible="False"><!-- NavMaster // --></asp:PlaceHolder>
+	<div id="ContentAdminTools" runat="server" visible="false"></div>
+
+<a name="pagetop" aria-hidden="true"><span class="sr-only">Page Top</span></a>
+<div id="outer-wrap" class="m-pikabu-viewport">
+  	
+<!-- Navigation drawer -->
+{{include "includes/mobile-nav.html"}}
+      
+<div id="inner-wrap" class="m-pikabu-container">
+
+	{{include "includes/header.html"}}
+  
+	<!-- MAIN CONTENT AREA -->
+	<div role="main" id="main" class="structBody">
+		<div class="container">
+			
+			<!-- Image Rotator -->
+			<div class="row">
+				<section class="col-md-12 imageRotator">
+					<div id="ContentRotator" runat="server">
+						<div class="bx_slide">
+							<div class="sldimg" style="background-image: url(http://placehold.it/1140x400)">
+								<a href="#"><span class="sr-only">[Content Name]</span></a>
+							</div>
+							<div class="sldtxt">
+								<div class="title"><a href="#">Slide Title</a></div>
+								<div class="preview">Pellentesque porta et lorem id lacinia. Nam malesuada nec tortor placerat pulvinar.</div>
+							</div>
+						</div>
+						<div class="bx_slide">
+							<div class="sldimg" style="background-image: url(http://placehold.it/1140x400)">
+								<a href="#"><span class="sr-only">[Content Name]</span></a>
+							</div>
+							<div class="sldtxt">
+								<div class="title"><a href="#">Slide Title</a></div>
+								<div class="preview">Pellentesque porta et lorem id lacinia. Nam malesuada nec tortor placerat pulvinar.</div>
+							</div>
+						</div>
+	
+						<!--<div class="bx_slide">
+						<div class="tools">[Tool Icons]</div>
+						<div class="sldimg">[EmptyCheck:ThumbnailUrl][Link]<img src="[ThumbnailUrl]" alt="[Content Name]" />[/Link][/EmptyCheck:ThumbnailUrl] </div>
+						[EmptyCheck:Preview]<div class="sldtxt">
+						<div class="title">[Link][Content Name][/Link]</div>
+						<div class="preview">[Preview]</div>
+						</div>[EmptyCheck:Preview]
+						</div>--> 
+	
+					</div>
+				</section>
+			</div>
+			
+
+			<!-- Two Col Interior Verison -->
+			<div class="row">
+				<section class="col-sm-9 col-sm-push-3 col-md-9 col-md-push-3">
+					<div id="ContentPageName" runat="server" class="pageName">
+						<h1>Page Name</h1>
+					</div>
+
+					<nav id="ContentBreadCrumbs" runat="server" class="hidden-xs breadCrumbs imodSiteMap">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">First Level</a></li>
+							<li><a href="#">Second Level</a></li>
+							<li class="selected"><a href="#">Active Level</a></li>
+						</ul>
+					</nav>
+	
+					<div id="ContentMiddle" runat="server">
+						<asp:PlaceHolder runat=server Visible="false">
+						<div runat="server" id="ContentSubGroupHeader"></div>
+						</asp:PlaceHolder>
+						<asp:PlaceHolder runat="server" ID="PageTitleSection" Visible="false">
+						<div> <span id="PageTitle" runat="server" class="PageTitleHeader"></span> <span id="PageSubTitle" runat="server" class="PageSubTitleHeader" visible="False"></span> <span id="PageTitleLink" runat="server" class="PageSubTitleHeader" visible="False"></span> </div>
+						<div id="PageInstructions" runat="server" class="instructions"></div>
+						</asp:PlaceHolder>
+						
+						<h1>Grunt and the Command Line</h1>
+
+						<h2>Why use it?</h2>
+						<ol>
+							<li>Because it's what all the kids are doing</li>
+							<li>If you have errors, you can see what is going wrong and fix it</li>
+						</ol>
+
+						<h2>Command Line (Terminal on Mac):</h2>
+						<ol>
+							<li>Open it</li>
+							<li>Traverse to the file you are working on
+								<ol>
+									<li>type "cd **folder name**" (cd means change directory)</li>
+									<li>ex. if you are working on your desktop you will type:
+										<ol>
+											<li>cd desktop</li>
+											<li>cd **project folder**</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+						</ol>
+
+						<h2>There are 3 commads you need to know to run the build system</h2>
+						<ol>
+							<li>npm install (run this the first time you start the project)</li>
+							<li>grunt serve (run this to work on the files)</li>
+							<li>grunt build (run this when you are ready to push your files)</li>
+						</ol>
+
+						<h2>Debugging Grunt</h2>
+						<ol>
+							<li>When you are working on the files or ready to push and you encounter an error type the command you are running and add --verbose
+								<ol>
+									<li>grunt serve --verbose</li>
+									<li>This will tell you every task that has ran and stop showing you an error
+								ex. <img src="images/grunt-error.png" alt=""></li>
+									<li>This example show that on build, copy > dist was missing.  Going into the gruntfile we can see this has been commented out.  If you have less/css errors, build errors, or anything go side ways.  The command line will tell you what is going on.</li>
+								</ol>
+							</li>
+						</ol>
+
+						<hr>
+						
+						<h2>News</h2>
+						<!--
+						<div class="newsItem">
+							[EmptyCheck:ThumbnailUrl]<div class="thumb">[Link]<img src="[ThumbnailUrl]" alt="[Content Name]" />[/Link]</div>
+							<div class="text">[/EmptyCheck:ThumbnailUrl]
+								<div class="title">[Link][Content Name][/Link][Tool Icons]</div>
+								<div class="preview">[Preview] </div>
+							[EmptyCheck:ThumbnailUrl]</div>[/EmptyCheck:ThumbnailUrl]
+						</div>
+						-->
+						<div class="newsItem">
+							<div class="thumb"><img src="http://placehold.it/120x120" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></div>
+							<div class="text">
+								<div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+								<div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+							</div>
+						</div>
+						<div class="newsItem">
+								<div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+								<div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+						</div>
+						<div class="newsItem">
+							<div class="thumb"><img src="http://placehold.it/120x120" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></div>
+							<div class="text">
+								<div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+								<div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+							</div>
+						</div>
+						
+						<h2>Events</h2>
+						<!--<div class="eventItem">
+						<div class="date">
+						<div class="month">[Month Abbreviation - Start Date]</div>
+						<div class="day">[Day of the Month - Start Date]</div>
+						</div>
+						<div class="text">
+						<div class="title">[Link][Content Name][/Link][Tool Icons]</div>
+						<div class="preview">[Preview]</div>
+						</div>
+						</div>-->
+						<div class="eventItem">
+							<div class="date">
+								<div class="month">Nov</div>
+								<div class="day">25</div>
+							</div>
+							<div class="text">
+								<div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+								<div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+							</div>
+						</div>
+						<div class="eventItem">
+							<div class="date">
+								<div class="month">Dec</div>
+								<div class="day">08</div>
+							</div>
+							<div class="text">
+								<div class="title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></div>
+								<div class="preview">Quisque in enim non leo laoreet luctus. Mauris rhoncus tortor non feugiat lobortis. Nunc volutpat purus ante, ut laoreet est vehicula ac. Phasellus congue libero eu diam pellentesque consectetur.</div>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+			
+				<!-- LEFT COLUMN -->
+				<aside class="col-sm-3 col-sm-pull-9 col-md-3 col-md-pull-9 structLeft">
+					<nav id="ContentLeftNav" runat="server" class="secondaryNav imodSiteMap hidden-xs">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li class="selected"><a href="#">About Us</a>
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About Us</a></li>
+									<li class="selected"><a href="#">Benefits</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Benefits</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+					<div id="ContentMiddleLayoutLeftBlock1" runat="server">
+						<p>Pellentesque porta et lorem id lacinia. Nam malesuada nec tortor placerat pulvinar. Curabitur ut sapien odio. Ut aliquet ac urna eget eleifend.</p>
+					</div>
+					<div id="ContentLeftBlock2" runat="server"></div>
+				</aside>
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- FOOTER -->
+	{{include "includes/footer.html"}}
+
+<div class="toplink visible-xs-block"><a href="#pagetop" role="button"><div class="fa fa-arrow-circle-o-up"></div> Back to Top</a></div>
+
+</div>
+</div>
+</form>
+<asp:PlaceHolder runat="server" ID="phFacebookSupport"></asp:PlaceHolder>
+
+{{include "includes/footer-scripts.html"}}
+
+<script>
+jQuery(document).ready(function(){
+
+	// Initialize BX Slider
+	jQuery('.bx_slide').newsItemSlice({
+		containerWrapper: '<div class="bx_slider"></div>'
+		//rowWrapper: '<div class="row"></div>'
+		//countPerRow: 3	
+	});
+	jQuery('.bx_slider').bxSlider({
+		auto: (jQuery(".bx_slider>.bx_slide").length > 1) ? true: false,
+		pager: true,
+		speed: 600,
+		pause: 10000,
+		mode: 'fade',
+		nextText: '<div class="fa fa-chevron-right"><span class="sr-only">Next</span></div>',
+		prevText: '<div class="fa fa-chevron-left"><span class="sr-only">Previous</span></div>',
+		controls: (jQuery(".bx_slider>.bx_slide").length > 1) ? true: false,
+		pager: (jQuery(".bx_slider>.bx_slide").length > 1) ? true: false	
+	});
+	
+})
+</script>
+
+</body>
+</html>

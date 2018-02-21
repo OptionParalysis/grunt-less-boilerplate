@@ -1,0 +1,71 @@
+/* MAIN TOP HORIZONTAL NAV
+---------------------------------------------*/
+.desktopNav {background:@light-grey; float:left; width:100%; position:relative; z-index:99;
+
+	ul {list-style-type:none; margin:0; padding:0;
+		li {float:left; padding:0; line-height:1.5em; font-weight:bold; text-transform:uppercase; position:relative;
+			&:hover {
+				li{
+					a{
+						&:hover {}
+					}
+				}
+			}
+			&:hover {
+				> a {color:@white; background:@dark-grey;}
+			}    
+			a {display:block; text-decoration:none; padding:0 1em;
+				&:hover {color:@white; background:@dark-grey;}
+			}
+		}
+	}
+
+	li{
+		&.sfHover {position:static;
+			ul {left: auto; opacity:1;
+				ul {left: -999em;
+					ul {left: -999em;}
+				}
+			}
+		}
+
+		ul {position: absolute; left: -999em; margin:0px; background:@dark-grey; float:none; width:15em; text-align:left; opacity:0; transition: opacity 500ms ease;top:100%;
+			li {width: 100%; border:none; margin: 0; padding:0; background:none; line-height:normal; text-transform:none; font-size:1em;
+				&.sfHover {position:static;
+					ul {left: auto; opacity:1;}
+				}
+				&:hover {
+					a {background: @red;}
+				}
+				a {
+					display:block;
+					padding-top:8px;
+					padding-bottom:8px;
+				}
+				
+				ul {margin:-23px 0 0 150px; background: @green; color:@white; width:170px;
+					li {width: 170px;
+						&.sfHover {position:static;
+							ul {left: auto; opacity:1;}
+						}
+						a {color:@white;
+						
+							&:hover {color:@light-grey;}
+						}
+					}
+					a {font-weight:normal; text-align:left; padding:0.25em 1em;border:none;}
+				}
+
+			}
+		}
+
+	}
+
+}
+
+/* Flexbox styles */
+.flexbox .desktopNavInner > ul {display: flex;
+	& > li {float:none; display: inherit;flex-direction: column;
+		& > a {display: inherit; width: 100%; line-height: 1.25em; padding: 20px 15px;  text-align: center; flex: 1 0 auto; align-items: center; justify-content: center;}
+	}
+}

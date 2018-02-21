@@ -1,0 +1,27 @@
+//Bootstrap scaffolding
+@xs-size: 450px;
+@sm-size: 738px;
+@md-size: 1140px;
+@lg-size: 1140px; //set to same as md-size because there are only 3 breakpoints in our system. can be changed to add a wide breakpoint.
+
+@grid-columns:               12;
+@grid-gutter-width:          30px;   //Padding between columns. Gets divided in half for the left and right.
+
+
+@screen-xs:                  (@xs-size + @grid-gutter-width);
+@screen-sm:                  (@sm-size + @grid-gutter-width);
+@screen-md:                  (@md-size + @grid-gutter-width);
+@screen-sm-1:                (@screen-sm - 1px);
+@screen-md-1:                (@screen-md - 1px);
+@screen-lg:                  (@lg-size + @grid-gutter-width); // unused with our three breakpoints
+
+//media query shortcuts Based on bootstrap scaffolding
+@wideDesktopOnly:  	~"only screen and (min-width: @{screen-lg})";
+@desktopOnly:  		~"only screen and (min-width: @{screen-md})";
+@tabletOnly: 		~"only screen and (min-width: @{screen-sm}) and (max-width: @{screen-md-1})";
+@tabletUp: 		    ~"only screen and (min-width: @{screen-sm})";
+@tabletDown: 		~"only screen and (max-width: @{screen-md-1})";
+@mobileAll: 		~"only screen and (max-width: @{screen-sm-1})";
+@mobilePortrait: 	~"only screen and (max-width: @{screen-xs})"; 
+@retinaDisplay: 	~"only screen and (-webkit-min-device-pixel-ratio: 2)";
+

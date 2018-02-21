@@ -1,0 +1,10 @@
+{
+  "node": true,
+  "browser": true,
+  "devel": true,
+  "undef": true,
+  "jquery": true,
+  "globals": {
+    "Pikabu": true
+  }
+}

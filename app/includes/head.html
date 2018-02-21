@@ -1,0 +1,37 @@
+<head id="MainHead" runat="server">	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title id="MainTitle" runat="server"></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	
+	<!-- build:css(app) css/vendor.css -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/pikabu.css">
+	<!-- endbuild -->
+
+	<!-- app styles -->
+	<link rel="stylesheet" href="/s/resources/css/appstyles.css">
+
+	<!-- build:css(.tmp) style.css -->
+	<link rel="stylesheet" href="style.css" id="MainStyle" runat="server">
+	<!-- endbuild -->
+
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	
+    <!-- Respond.js for IE8 support of media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- grunt:delete -->
+		<!-- Include jQuery with noConflict for local testing - This will be deleted when the build task is run-->
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script>
+			$.noConflict();
+		</script>
+	<!-- endgrunt -->
+
+</head>

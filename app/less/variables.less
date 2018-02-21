@@ -1,0 +1,28 @@
+// default colors
+@white: #fff;
+@light-grey: #ccc;
+@dark-grey: #666;
+@black: #000;
+
+@red: red;
+@blue: blue;
+@green: green;
+@yellow: yellow;
+
+/* Pixels - These control the template breakpoints only - they will not affect the bootstrap grid */
+@px-lg: 1180px;
+@px-md: 1024px;
+@px-sm: 700px;
+@px-xs: 480px;
+
+/* Breakpoints */
+@xs-portrait: ~"only screen and (max-width: " (@px-xs - 1) ~")";
+@xs: ~"only screen and (max-width: " (@px-sm - 1) ~")";
+@sm: ~"only screen and (min-width: @{px-sm}) and (max-width: " (@px-md - 1) ~")";
+@md: ~"only screen and (min-width: @{px-md}) and (max-width: " (@px-lg - 1) ~")";
+@lg: ~"only screen and (min-width: @{px-lg})";
+@below-sm: ~"only screen and (max-width: " (@px-sm - 1) ~")";
+@below-md: ~"only screen and (max-width: " (@px-md - 1) ~")";
+@below-lg: ~"only screen and (max-width: " (@px-lg - 1) ~")";
+@retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+@between-sm-lg: ~"only screen and (min-width: @{px-md}) and (max-width: 1300px)";

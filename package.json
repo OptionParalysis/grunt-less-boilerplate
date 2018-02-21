@@ -1,0 +1,36 @@
+{
+  "name": "imodules-webapp",
+  "description": "Stop reading this and get back to work!",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-create-print-logo": "^0.1.0",
+    "grunt-dom-munger": "^3.4.0",
+    "grunt-include-source": "^0.5.0",
+    "grunt-newer": "^0.7.0",
+    "grunt-pixrem": "^0.1.2",
+    "grunt-postcss": "^0.8.0",
+    "grunt-replace": "^0.8.0",
+    "grunt-usemin": "^2.3.0",
+    "jshint-stylish": "^0.4.0",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.33"
+  },
+  "repository": {},
+  "dependencies": {
+    "grunt-includes": "^0.5.4"
+  }
+}
